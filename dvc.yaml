@@ -51,5 +51,6 @@ stages:
     - models/gbr_model.pkl
     - src/models/evaluate.py
     outs:
-    - metrics/scores.json
     - metrics/predictions.csv
+    metrics:
+    - metrics/scores.json
