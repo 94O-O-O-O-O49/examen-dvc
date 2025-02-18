@@ -4,8 +4,8 @@ import pickle
 from sklearn.ensemble import GradientBoostingRegressor
 
 def main():
-    data_dir = "dvc/data/processed"
-    models_dir = "dvc/models"
+    data_dir = "examen-dvc/data/processed"
+    models_dir = "examen-dvc/models"
 
     # Load training data
     X_train = pd.read_csv(os.path.join(data_dir, "X_train_scaled.csv"))
