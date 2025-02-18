@@ -19,7 +19,7 @@ def main():
     }
     
     # Load training data
-    data_dir = "examen-dvc/data/processed"
+    data_dir = "data/processed"
     X_train = pd.read_csv(os.path.join(data_dir, "X_train_scaled.csv"))
     y_train = pd.read_csv(os.path.join(data_dir, "y_train.csv")).squeeze()
 
@@ -29,7 +29,7 @@ def main():
     grid_search.fit(X_train, y_train)
     
     # Ensure models directory exists
-    output_dir = "examen-dvc/models"
+    output_dir = "models"
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
         

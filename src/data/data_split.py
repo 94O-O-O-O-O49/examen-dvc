@@ -12,7 +12,7 @@ def main():
     random_state = split_params.get("random_state", 42)
 
     # Load raw data
-    raw_data_path = "examen-dvc/data/raw/raw.csv"
+    raw_data_path = "data/raw/raw.csv"
     df = pd.read_csv(raw_data_path)
 
     # Drop the 'date' column if it exists
@@ -30,7 +30,7 @@ def main():
     )
 
     # Ensure output directory exists
-    output_dir = "examen-dvc/data/processed"
+    output_dir = "data/processed"
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 

@@ -5,9 +5,9 @@ import pickle
 from sklearn.metrics import mean_squared_error, r2_score
 
 def main():
-    data_dir = "examen-dvc/data/processed"
-    models_dir = "examen-dvc/models"
-    metrics_dir = "examen-dvc/metrics"
+    data_dir = "data/processed"
+    models_dir = "models"
+    metrics_dir = "metrics"
 
     # Ensure the metrics directory exists
     if not os.path.exists(metrics_dir):
@@ -25,7 +25,7 @@ def main():
     # Generate predictions
     predictions = model.predict(X_test)
     predictions_df = pd.DataFrame(predictions, columns=["predictions"])
-    predictions_csv_path = "examen-dvc/metrics/predictions.csv"
+    predictions_csv_path = "metrics/predictions.csv"
     predictions_df.to_csv(predictions_csv_path, index=False)
     print("Predictions saved to", predictions_csv_path)
 

@@ -24,7 +24,7 @@ def import_raw_data(raw_data_relative_path, filenames, bucket_folder_url):
             else:
                 print(f"Error accessing the object {input_file}: {response.status_code}")
 
-def main(raw_data_relative_path="./dvc/data/raw", 
+def main(raw_data_relative_path="./data/raw", 
          filenames=["raw.csv"],
          bucket_folder_url="https://datascientest-mlops.s3.eu-west-1.amazonaws.com/mlops_dvc_fr"):
     """Download raw data from the given bucket URL and store it in the raw data folder."""

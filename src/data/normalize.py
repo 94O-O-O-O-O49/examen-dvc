@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
 def main():
-    input_dir = "examen-dvc/data/processed"
+    input_dir = "data/processed"
     X_train_path = os.path.join(input_dir, "X_train.csv")
     X_test_path = os.path.join(input_dir, "X_test.csv")
     
